@@ -51,7 +51,7 @@
 
 .login-button:hover {
   background-color: #388e3c;
-  color: white; /* Keep the text color white when hovering */
+  color: white;
 }
 
 .toggle-button {
@@ -65,5 +65,5 @@
 
 .toggle-button:hover {
   text-decoration: underline;
-  color: white; /* Keep the text color white when hovering */
+  color: white;
 }

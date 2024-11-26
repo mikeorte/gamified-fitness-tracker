@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Profile.css"; // Import Profile styles
+import "./Profile.css";
 
 function Profile() {
 	const [useMetric, setUseMetric] = useState(true);

@@ -5,9 +5,9 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Challenges from "./pages/Challenges";
 import Rewards from "./pages/Rewards";
-import Profile from "./pages/Profile"; // Import Profile page
+import Profile from "./pages/Profile";
 import Navbar from "./components/Navbar";
-import "./App.css"; // Import global styles
+import "./App.css";
 
 function App() {
 	return (

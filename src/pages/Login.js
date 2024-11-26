@@ -11,9 +11,8 @@ function Login() {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (isSignUp) {
-			// Handle sign-up logic here
+			alert("Sign up is not available in this demo.");
 		} else {
-			// Handle login logic here
 			if (email === "test@test.com" && password === "test123") {
 				navigate("/dashboard");
 			} else {

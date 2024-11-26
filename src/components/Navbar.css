@@ -1,14 +1,14 @@
 nav {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	background-color: #4caf50;
+	color: white;
+	padding: 10px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar {
 	background-color: #388e3c;
 	color: white;
-	padding: 5px 10px; /* Adjust padding to reduce navbar height */
+	padding: 5px 10px;
 	margin: 0;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
@@ -18,8 +18,8 @@ nav {
 	padding: 0;
 	display: flex;
 	justify-content: space-around;
-	flex-wrap: wrap; /* Ensure the Navbar is responsive */
-	align-items: center; /* Center items vertically */
+	flex-wrap: wrap;
+	align-items: center;
 }
 
 .navbar-item {
@@ -35,7 +35,7 @@ nav {
 
 .navbar-link:hover {
 	text-decoration: underline;
-	color: white; /* Keep the text color white when hovering */
+	color: white;
 }
 
 .signout-button {
@@ -51,7 +51,7 @@ nav {
 .signout-button:hover {
 	text-decoration: underline;
 	background-color: #4caf50;
-	color: white; /* Keep the text color white when hovering */
+	color: white;
 }
 
 .profile-section {
@@ -68,6 +68,6 @@ nav {
 }
 
 .navbar-logo {
-	height: 150px; /* Keep the logo size */
+	height: 150px;
 	margin-right: 10px;
 }

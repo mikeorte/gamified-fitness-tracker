@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import "./Navbar.css"; // Import Navbar styles
-import logo from '../assets/logo.png'; // Import logo
+import "./Navbar.css";
+import logo from '../assets/logo.png';
 
 function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const userName = "Test User"; // Hardcoded user name for prototype
+  const userName = "Test User"; 
 
   useEffect(() => {
     // Check if the user is logged in based on the current path

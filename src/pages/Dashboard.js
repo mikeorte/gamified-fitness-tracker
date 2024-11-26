@@ -1,7 +1,7 @@
 import React from 'react';
 import ProgressChart from '../components/ProgressChart';
 import GoalSetter from '../components/GoalSetter';
-import './Dashboard.css'; // Import Dashboard specific styles
+import './Dashboard.css';
 
 function Dashboard() {
   return (

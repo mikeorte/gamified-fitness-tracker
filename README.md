@@ -23,6 +23,7 @@ The Gamified Fitness Tracker is a mobile-friendly React application that promote
 - **Progress Visualization**: Interactive charts and leaderboards.
 - **Customizable Goals**: Set personal fitness targets tailored to individual preferences.
 - **Responsive Design**: Optimized for mobile devices.
+- **Profile Management**: Manage your account and view your activity history.
 
 ## Installation
 
@@ -53,6 +54,7 @@ npm start
 - Create an account or log in if you already have one.
 - Connect your wearable device to start tracking your fitness activities.
 - Set your fitness goals and start earning rewards!
+- **Manage Profile**: Update your account information and view your activity history.
 
 ### Sign Up/Log In:
 
@@ -73,6 +75,10 @@ Join multiplayer challenges to compete with friends.
 ### Earn Rewards:
 
 Unlock badges and points as you achieve your goals.
+
+### Manage Profile:
+
+Update your account information and view your activity history.
 
 ## HCI Principles
 
