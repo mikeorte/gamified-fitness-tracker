@@ -1,4 +1,4 @@
-# Gamified Fitness Tracker
+# Gamified Fitness Tracker - Demo
 
 ## Project Overview
 
@@ -23,7 +23,7 @@ The Gamified Fitness Tracker is a mobile-friendly React application that promote
 - **Progress Visualization**: Interactive charts and leaderboards.
 - **Customizable Goals**: Set personal fitness targets tailored to individual preferences.
 - **Responsive Design**: Optimized for mobile devices.
-- **Profile Management**: Manage your account and view your activity history.
+- **Profile Management**: Manage your account, view your activity history, and connect with friends.
 
 ## Installation
 
@@ -54,7 +54,7 @@ npm start
 - Create an account or log in if you already have one.
 - Connect your wearable device to start tracking your fitness activities.
 - Set your fitness goals and start earning rewards!
-- **Manage Profile**: Update your account information and view your activity history.
+- **Manage Profile**: Update your account information, view your activity history, and manage friend requests.
 
 ### Sign Up/Log In:
 
@@ -78,7 +78,9 @@ Unlock badges and points as you achieve your goals.
 
 ### Manage Profile:
 
-Update your account information and view your activity history.
+- Update your account information and view your activity history.
+- Add friends by username and manage pending friend requests.
+- View integration with wearable devices for live updates.
 
 ## HCI Principles
 
@@ -110,12 +112,12 @@ Update your account information and view your activity history.
 
 ## Team Contributions
 
-| Team Member     | UID        | Contribution                                                              |
-| --------------- | ---------- | ------------------------------------------------------------------------- |
-| Michael Ortega  | [Your UID] | React development, component design, integration of gamification elements |
-| [Team Member 2] | [UID]      | User interface design and usability testing                               |
-| [Team Member 3] | [UID]      | Backend API development and wearable integration                          |
-| [Team Member 4] | [UID]      | Documentation, report writing, and presentation slides                    |
+| Team Member     | UID         | Contribution                                           |
+| --------------- | ----------- | ------------------------------------------------------ |
+| Michael Ortega  | [815274314] | React development, component design                    |
+| [Team Member 2] | [UID]       | User interface design and usability testing            |
+| [Team Member 3] | [UID]       | Quality Testing, Error Handling                        |
+| [Team Member 4] | [UID]       | Documentation, report writing, and presentation slides |
 
 ## Project Reflection
 
