@@ -82,6 +82,10 @@ Unlock badges and points as you achieve your goals.
 - Add friends by username and manage pending friend requests.
 - View integration with wearable devices for live updates.
 
+### Using Local Storage:
+
+- The application uses local storage to save user data and progress. Ensure your browser settings allow local storage.
+
 ## HCI Principles
 
 - **User-Centered Design**: Simple navigation and minimal cognitive load.
@@ -112,12 +116,12 @@ Unlock badges and points as you achieve your goals.
 
 ## Team Contributions
 
-| Team Member     | UID         | Contribution                                           |
+| Team Member     | UIN         | Contribution                                           |
 | --------------- | ----------- | ------------------------------------------------------ |
 | Michael Ortega  | [815274314] | React development, component design                    |
-| [Team Member 2] | [UID]       | User interface design and usability testing            |
-| [Team Member 3] | [UID]       | Quality Testing, Error Handling                        |
-| [Team Member 4] | [UID]       | Documentation, report writing, and presentation slides |
+| [Team Member 2] | [UIN]       | User interface design and usability testing            |
+| [Team Member 3] | [UIN]       | Quality Testing, Error Handling                        |
+| [Team Member 4] | [UIN]       | Documentation, report writing, and presentation slides |
 
 ## Project Reflection
 

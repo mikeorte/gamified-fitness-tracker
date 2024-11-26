@@ -1,0 +1,20 @@
+
+{
+  "user": {
+    "email": "test@test.com",
+    "password": "test123"
+  },
+  "profile": {
+    "useMetric": true,
+    "height": 180,
+    "weight": 75,
+    "profilePicture": null,
+    "username": "TestUser",
+    "email": "test@test.com",
+    "bio": "Fitness enthusiast and marathon runner.",
+    "showProgressToFriends": true,
+    "friends": [],
+    "pendingRequests": [],
+    "incomingRequests": []
+  }
+}

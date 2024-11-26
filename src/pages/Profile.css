@@ -156,6 +156,34 @@ input:checked + .toggle-label .toggle-switch {
   background-color: #388e3c;
 }
 
+.save-button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.save-button:hover {
+  background-color: #388e3c;
+}
+
+.edit-button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
 .pending-requests,
 .incoming-requests {
   margin-top: 20px;

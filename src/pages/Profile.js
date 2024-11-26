@@ -1,35 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Profile.css";
+import data from "../data.json"; // Import initial data from JSON file
 
 function Profile() {
-	const [useMetric, setUseMetric] = useState(true);
-	const [height, setHeight] = useState(180);
-	const [weight, setWeight] = useState(75);
-	const [profilePicture, setProfilePicture] = useState(null);
-	const [username] = useState("TestUser");
-	const [email] = useState("test@test.com");
-	const [bio] = useState("Fitness enthusiast and marathon runner.");
-	const [showProgressToFriends, setShowProgressToFriends] = useState(true);
-	const [friends, setFriends] = useState([
-		{
-			name: "Alice",
-			goal: "Run 5K daily",
-			sharedChallenges: ["7-Day Step Challenge"],
-		},
-		{
-			name: "Bob",
-			goal: "Lose 5kg in a month",
-			sharedChallenges: ["Weight Loss Challenge"],
-		},
-		{
-			name: "Charlie",
-			goal: "Cycle 10km daily",
-			sharedChallenges: ["Cardio Challenge"],
-		},
-	]);
-	const [pendingRequests, setPendingRequests] = useState(["TestUser2"]);
-	const [incomingRequests, setIncomingRequests] = useState(["TestUser3"]);
+	const [useMetric, setUseMetric] = useState(data.profile.useMetric);
+	const [height, setHeight] = useState(data.profile.height);
+	const [weight, setWeight] = useState(data.profile.weight);
+	const [profilePicture, setProfilePicture] = useState(data.profile.profilePicture);
+	const [username, setUsername] = useState(data.profile.username);
+	const [email, setEmail] = useState(data.profile.email);
+	const [bio, setBio] = useState(data.profile.bio);
+	const [showProgressToFriends, setShowProgressToFriends] = useState(data.profile.showProgressToFriends);
+	const [friends, setFriends] = useState(data.profile.friends);
+	const [pendingRequests, setPendingRequests] = useState(data.profile.pendingRequests);
+	const [incomingRequests, setIncomingRequests] = useState(data.profile.incomingRequests);
 	const [newFriendUsername, setNewFriendUsername] = useState("");
+	const [isEditing, setIsEditing] = useState(false);
 
 	const wearableData = {
 		device: "Fitbit Charge 4",
@@ -37,6 +23,40 @@ function Profile() {
 		heartRate: 75,
 		caloriesBurned: 500,
 	};
+
+	useEffect(() => {
+		const storedProfile = JSON.parse(localStorage.getItem("profile"));
+		if (storedProfile) {
+			setUseMetric(storedProfile.useMetric);
+			setHeight(storedProfile.height);
+			setWeight(storedProfile.weight);
+			setProfilePicture(storedProfile.profilePicture);
+			setUsername(storedProfile.username);
+			setEmail(storedProfile.email);
+			setBio(storedProfile.bio);
+			setShowProgressToFriends(storedProfile.showProgressToFriends);
+			setFriends(storedProfile.friends);
+			setPendingRequests(storedProfile.pendingRequests);
+			setIncomingRequests(storedProfile.incomingRequests);
+		}
+	}, []);
+
+	useEffect(() => {
+		const profile = {
+			useMetric,
+			height,
+			weight,
+			profilePicture,
+			username,
+			email,
+			bio,
+			showProgressToFriends,
+			friends,
+			pendingRequests,
+			incomingRequests,
+		};
+		localStorage.setItem("profile", JSON.stringify(profile));
+	}, [useMetric, height, weight, profilePicture, username, email, bio, showProgressToFriends, friends, pendingRequests, incomingRequests]);
 
 	const toggleUnitSystem = () => {
 		if (useMetric) {
@@ -77,6 +97,25 @@ function Profile() {
 		setIncomingRequests(incomingRequests.filter((request) => request !== username));
 	};
 
+	const handleSaveChanges = () => {
+		const profile = {
+			useMetric,
+			height,
+			weight,
+			profilePicture,
+			username,
+			email,
+			bio,
+			showProgressToFriends,
+			friends,
+			pendingRequests,
+			incomingRequests,
+		};
+		localStorage.setItem("profile", JSON.stringify(profile));
+		alert("Profile updated successfully!");
+		setIsEditing(false);
+	};
+
 	return (
 		<div className="profile-container">
 			<h2>User Profile</h2>
@@ -86,6 +125,7 @@ function Profile() {
 					id="unit-toggle"
 					checked={useMetric}
 					onChange={toggleUnitSystem}
+					disabled={!isEditing}
 				/>
 				<label htmlFor="unit-toggle" className="toggle-label">
 					<span className="toggle-inner" />
@@ -100,7 +140,7 @@ function Profile() {
 					) : (
 						<p>No profile picture</p>
 					)}
-					<input type="file" onChange={handleProfilePictureChange} />
+					{isEditing && <input type="file" onChange={handleProfilePictureChange} />}
 				</div>
 				<p>
 					<strong>Username:</strong> {username}
@@ -109,13 +149,40 @@ function Profile() {
 					<strong>Email:</strong> {email}
 				</p>
 				<p>
-					<strong>Bio:</strong> {bio}
+					<strong>Bio:</strong>
+					{isEditing ? (
+						<input
+							type="text"
+							value={bio}
+							onChange={(e) => setBio(e.target.value)}
+						/>
+					) : (
+						bio
+					)}
 				</p>
 				<p>
-					<strong>Height:</strong> {height} {useMetric ? "cm" : "in"}
+					<strong>Height:</strong>
+					{isEditing ? (
+						<input
+							type="number"
+							value={height}
+							onChange={(e) => setHeight(e.target.value)}
+						/>
+					) : (
+						`${height} ${useMetric ? "cm" : "in"}`
+					)}
 				</p>
 				<p>
-					<strong>Weight:</strong> {weight} {useMetric ? "kg" : "lbs"}
+					<strong>Weight:</strong>
+					{isEditing ? (
+						<input
+							type="number"
+							value={weight}
+							onChange={(e) => setWeight(e.target.value)}
+						/>
+					) : (
+						`${weight} ${useMetric ? "kg" : "lbs"}`
+					)}
 				</p>
 				<p>
 					<strong>Date of Joining:</strong> Jan 1, 2023
@@ -126,6 +193,7 @@ function Profile() {
 						id="progress-toggle"
 						checked={showProgressToFriends}
 						onChange={toggleShowProgressToFriends}
+						disabled={!isEditing}
 					/>
 					<label htmlFor="progress-toggle" className="toggle-label">
 						<span className="toggle-inner" />
@@ -133,6 +201,15 @@ function Profile() {
 					</label>
 					<span>Show Challenge Progress to Friends</span>
 				</div>
+				{isEditing ? (
+					<button onClick={handleSaveChanges} className="save-button">
+						Save Changes
+					</button>
+				) : (
+					<button onClick={() => setIsEditing(true)} className="edit-button">
+						Edit
+					</button>
+				)}
 			</div>
 			<h3>Friends</h3>
 			<div className="friends-section">
