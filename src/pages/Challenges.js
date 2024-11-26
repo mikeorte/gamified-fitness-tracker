@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Challenges.css"; 
+import "./Challenges.css";
 
 function Challenges() {
 	const [joinedChallenge, setJoinedChallenge] = useState("");

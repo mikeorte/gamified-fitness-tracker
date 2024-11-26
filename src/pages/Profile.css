@@ -98,3 +98,113 @@ input:checked + .toggle-label .toggle-switch {
   font-size: 16px;
   color: #333;
 }
+
+.friends-section {
+  margin-top: 20px;
+}
+
+.friend {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.friend p {
+  margin: 5px 0;
+}
+
+.wearable-section {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.wearable-section p {
+  margin: 5px 0;
+}
+
+.add-friend {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.add-friend h4 {
+  margin-bottom: 10px;
+}
+
+.add-friend input {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-friend button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.add-friend button:hover {
+  background-color: #388e3c;
+}
+
+.pending-requests,
+.incoming-requests {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.pending-requests .request {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.pending-requests p,
+.incoming-requests p {
+  margin: 5px 0;
+}
+
+.pending-requests h5 {
+  margin-top: 0;
+}
+
+.pending-requests p {
+  margin: 0;
+}
+
+.cancel-button {
+  background-color: #f44336;
+}
+
+.cancel-button:hover {
+  background-color: #d32f2f;
+}
+
+.approve-button {
+  background-color: #4caf50;
+  margin-right: 10px;
+}
+
+.approve-button:hover {
+  background-color: #388e3c;
+}
+
+.deny-button {
+  background-color: #f44336;
+}
+
+.deny-button:hover {
+  background-color: #d32f2f;
+}
